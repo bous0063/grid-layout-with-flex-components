@@ -36,3 +36,102 @@ body {
   max-width: 1450px;
   margin: 2.5rem auto 2rem;
 }
+
+/*to otain the same bold heading above the emoji cards*/
+.siteheader h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* --------------------------------------------------
+   EMOJI CARD GRID
+-------------------------------------------------- */
+
+/*to arrange the cards in two columns and two rows*/
+.emojis {
+  width: 90%;
+  max-width: 1450px;
+  margin: 0 auto;
+  display: grid;
+
+  /* to create two equal-width columns */
+  grid-template-columns: repeat(2, 1fr);
+
+  /*to leave the same gap between the cards horizontally and vertically.*/
+  gap: 1.5rem;
+}
+
+/* --------------------------------------------------
+   CONTENT INSIDE EACH CARD
+-------------------------------------------------- */
+
+/* This allows the icon, heading, paragraph and button be arranged vertically */
+.emoji {
+  display: flex;
+  flex-direction: column;
+  min-height: 375px;
+}
+
+
+/* to get the desired order of items */
+.emoji .icon {  
+  order: 1; 
+  align-self: center;
+  margin: 0.5rem 0 1rem;
+}
+
+.emoji h2 {
+  order: 2;
+  font-size: 2rem;
+  line-height: 1.2;
+  padding-bottom: 0.35rem;
+}
+
+.emoji p {
+  order: 3;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 1rem 0;
+}
+
+
+/* pushes every button down to the bottom of its card*/
+.emoji a {
+  order: 4;
+  margin-top: auto;
+
+  display: block;
+
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+
+/* allows the grid to change to one column on smaller screens*/
+@media (max-width: 800px) {
+  .siteheader,
+  .emojis {
+    width: 90%;
+  }
+
+  .emojis {
+    grid-template-columns: 1fr;
+  }
+
+  .siteheader h1 {
+    font-size: 2rem;
+  }
+
+  .emoji h2 {
+    font-size: 1.5rem;
+  }
+
+  .emoji p,
+  .emoji a {
+    font-size: 1rem;
+  }
+}
+
+
+
+
