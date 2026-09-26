@@ -1,3 +1,6 @@
+/* --------------------------------------------------
+   BASE STYLES
+-------------------------------------------------- */
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: #222;
@@ -29,7 +32,8 @@ body {
 /* --------------------------------------------------
    PAGE HEADER
 -------------------------------------------------- */
-/*This allows the header and themain content share the same width so that
+
+/*To allow the header and main content share the same width so that
   the heading lines up with the card grid below it*/
 .siteheader {
   width: 90%;
@@ -65,7 +69,7 @@ body {
    CONTENT INSIDE EACH CARD
 -------------------------------------------------- */
 
-/* This allows the icon, heading, paragraph and button be arranged vertically */
+/* To allow the icon, heading, paragraph and button be arranged vertically */
 .emoji {
   display: flex;
   flex-direction: column;
